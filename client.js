@@ -1,10 +1,11 @@
 const net =require('net');
+const { IP, PORT } = require('./constants');
 
 
 const connect = function() {
   const conn = net.createConnection({ 
-    host: 'localhost', //use localhost to play on your machine or ip of server machine
-    port: 50541
+    host: IP, //use localhost to play on your machine or ip of server machine
+    port: PORT
   });
   conn.on('connect', () => {
     console.log("Successfully connected to game server");
