@@ -12,6 +12,20 @@ const connect = function() {
   conn.on('connect', () => {
     conn.write('Name: MAL');
   })
+  conn.on('connect', () => {
+    conn.write("Move: up");
+  })
+  conn.on('connect', () => {
+    setTimeout (() => {
+      conn.write("Move: left");
+    }, 1000);
+  })
+  conn.on('connect', () => {
+    setInterval(() => {
+      conn.write("Move: up");
+    }, 500);
+    
+  })
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
   conn.on('data', (data) => {
