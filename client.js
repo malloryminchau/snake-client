@@ -3,7 +3,7 @@ const net =require('net');
 
 const connect = function() {
   const conn = net.createConnection({ 
-    host: 'localhost',
+    host: 'localhost', //use localhost to play on your machine or ip of server machine
     port: 50541
   });
   conn.on('connect', () => {
